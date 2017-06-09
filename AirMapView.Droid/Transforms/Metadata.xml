@@ -1,0 +1,211 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <!--<remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']" />-->
+
+  <remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]" />
+  <remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]" />
+  <remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]" />
+  
+  <!--<attr name="eventName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
+    MapMarkerDragStarted
+  </attr>
+  <attr name="argsType" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
+    MapMarkerDragStart2EventArgs
+  </attr>
+  <attr name="eventName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
+    MapMarkerDragEnded
+  </attr>
+  <attr name="argsType" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
+    MapMarkerDragEnd2EventArgs
+  </attr>
+  <attr name="eventName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
+    MapMarkerDragged
+  </attr>
+  <attr name="argsType" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
+    MapMarkerDrag2EventArgs
+  </attr>-->
+  
+  <add-node path="/api/package[@name='com.airbnb.android.airmapview']">
+    <class abstract="false" deprecated="not deprecated" final="false" name="AirMapView" static="false" visibility="public" synchronized="true" extends="android.widget.FrameLayout">
+      <constructor deprecated="not deprecated" final="false" name="AirMapView" static="false" type="com.airbnb.android.airmapview.AirMapView" visibility="public">
+        <parameter name="Context" type="android.content.Context"/>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AirMapView" static="false" type="com.airbnb.android.airmapview.AirMapView" visibility="public">
+        <parameter name="context" type="android.content.Context"/>
+        <parameter name="attrs" type="android.util.AttributeSet"/>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="AirMapView" static="false" type="com.airbnb.android.airmapview.AirMapView" visibility="public">
+        <parameter name="context" type="android.content.Context"/>
+        <parameter name="attrs" type="android.util.AttributeSet"/>
+        <parameter name="defStyle" type="int"/>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="fragmentManager" type="android.support.v4.app.FragmentManager"/>
+        <parameter name="airMapInterface" type="com.airbnb.android.airmapview.AirMapInterface"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="fragmentManager" type="android.support.v4.app.FragmentManager"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnMapInitializedListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="listener" type="com.airbnb.android.airmapview.listeners.OnMapInitializedListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="dispatchTouchEvent" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="MotionEvent" type="android.view.MotionEvent"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnCameraChangeListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="listener" type="com.airbnb.android.airmapview.listeners.OnCameraChangeListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnCameraMoveListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="listener" type="com.airbnb.android.airmapview.listeners.OnCameraMoveListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="true" name="getMapInterface" native="false" return="com.airbnb.android.airmapview.AirMapInterface" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onDestroyView" native="false" return="void" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getZoom" native="false" return="int" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCenter" native="false" return="com.google.android.gms.maps.model.LatLng" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="animateCenter" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setZoom" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="level" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCenterZoom" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="level" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="animateCenterZoom" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="level" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBounds" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLngBounds" type="com.google.android.gms.maps.model.LatLngBounds"/>
+        <parameter name="boundsPadding" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getScreenBounds" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="callback" type="com.airbnb.android.airmapview.listeners.OnMapBoundsCallback"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMapMarkerScreenLocation" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="OnLatLngScreenLocationCallback" type="com.airbnb.android.airmapview.listeners.OnLatLngScreenLocationCallback"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="drawCircle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="radius" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="drawCircle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="radius" type="int"/>
+        <parameter name="strokeColor" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="drawCircle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="radius" type="int"/>
+        <parameter name="strokeColor" type="int"/>
+        <parameter name="strokeWidth" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="drawCircle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="radius" type="int"/>
+        <parameter name="strokeColor" type="int"/>
+        <parameter name="strokeWidth" type="int"/>
+        <parameter name="fillColor" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPadding" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="left" type="int"/>
+        <parameter name="top" type="int"/>
+        <parameter name="right" type="int"/>
+        <parameter name="bottom" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnMarkerClickListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="OnMapMarkerClickListener" type="com.airbnb.android.airmapview.listeners.OnMapMarkerClickListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnMarkerDragListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="OnMapMarkerDragListener" type="com.airbnb.android.airmapview.listeners.OnMapMarkerDragListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnMapClickListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="OnMapClickListener" type="com.airbnb.android.airmapview.listeners.OnMapClickListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setInfoWindowAdapter" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="GoogleMap$InfoWindowAdapter" type="com.google.android.gms.maps.GoogleMap$InfoWindowAdapter"/>
+        <parameter name="InfoWindowCreator" type="com.google.android.gms.maps.InfoWindowCreator"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnInfoWindowClickListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="OnInfoWindowClickListener" type="com.airbnb.android.airmapview.listeners.OnInfoWindowClickListener"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearMakers" native="false" return="void" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addPolyline" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapPolyline" type="com.airbnb.android.airmapview.AirMapPolyline"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMapType" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="MapType" type="com.airbnb.android.airmapview.MapType"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removePolyline" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapPolyline" type="com.airbnb.android.airmapview.AirMapPolyline"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addPolygon" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapPolygon" type="com.airbnb.android.airmapview.AirMapPolygon"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removePolygon" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapPolygon" type="com.airbnb.android.airmapview.AirMapPolygon"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setGeoJsonLayer" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapGeoJsonLayer" type="com.airbnb.android.airmapview.AirMapGeoJsonLayer"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearGeoJsonLayer" native="false" return="void" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isInitialized" native="false" return="boolean" static="false" synchronized="false" visibility="public"/>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addMarker" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapMarker" type="com.airbnb.android.airmapview.AirMapMarker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeMarker" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapMarker" type="com.airbnb.android.airmapview.AirMapMarker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="moveMarker" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapMarker" type="com.airbnb.android.airmapview.AirMapMarker"/>
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMyLocationEnable" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="boolean" type="boolean"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+        <parameter name="int" type="int"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapMarker" type="com.airbnb.android.airmapview.AirMapMarker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerDragStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="Marker" type="com.google.android.gms.maps.model.Marker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerDrag" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="Marker" type="com.google.android.gms.maps.model.Marker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerDragEnd" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="Marker" type="com.google.android.gms.maps.model.Marker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerDragStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="long" type="long"/>
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerDrag" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="long" type="long"/>
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapMarkerDragEnd" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="long" type="long"/>
+        <parameter name="LatLng" type="com.google.android.gms.maps.model.LatLng"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onInfoWindowClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="AirMapMarker" type="com.airbnb.android.airmapview.AirMapMarker"/>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onMapLoaded" native="false" return="void" static="false" synchronized="false" visibility="public"/>
+    </class>
+  </add-node>
+</metadata>
