@@ -6,30 +6,15 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
-  <!--<remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']" />-->
-
-  <remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]" />
-  <remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]" />
-  <remove-node path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]" />
-  
-  <!--<attr name="eventName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
-    MapMarkerDragStarted
+  <attr name="managedName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.maps.model.Marker']]">
+    OnGoogleMarkerDrag
   </attr>
-  <attr name="argsType" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
-    MapMarkerDragStart2EventArgs
+  <attr name="managedName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragStart' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.maps.model.Marker']]">
+    OnGoogleMarkerDragStart
   </attr>
-  <attr name="eventName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
-    MapMarkerDragEnded
+  <attr name="managedName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.maps.model.Marker']]">
+    OnGoogleMarkerDragEnd
   </attr>
-  <attr name="argsType" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDragEnd' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
-    MapMarkerDragEnd2EventArgs
-  </attr>
-  <attr name="eventName" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
-    MapMarkerDragged
-  </attr>
-  <attr name="argsType" path="/api/package[@name='com.airbnb.android.airmapview.listeners']/interface[@name='OnMapMarkerDragListener']/method[@name='onMapMarkerDrag' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='com.google.android.gms.maps.model.LatLng']]">
-    MapMarkerDrag2EventArgs
-  </attr>-->
   
   <add-node path="/api/package[@name='com.airbnb.android.airmapview']">
     <class abstract="false" deprecated="not deprecated" final="false" name="AirMapView" static="false" visibility="public" synchronized="true" extends="android.widget.FrameLayout">
