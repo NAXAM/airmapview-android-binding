@@ -281,7 +281,10 @@ namespace AirMapViewQs
 			public const int googleg_standard_color_18 = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int Icon = 2130837525;
+			public const int ic_location_green = 2130837525;
+			
+			// aapt resource value: 0x7f020016
+			public const int Icon = 2130837526;
 			
 			static Drawable()
 			{
@@ -296,6 +299,24 @@ namespace AirMapViewQs
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f09001a
+			public const int action_clear_logs = 2131296282;
+			
+			// aapt resource value: 0x7f090018
+			public const int action_google_china_web_map = 2131296280;
+			
+			// aapt resource value: 0x7f090017
+			public const int action_google_web_map = 2131296279;
+			
+			// aapt resource value: 0x7f090019
+			public const int action_mapbox_map = 2131296281;
+			
+			// aapt resource value: 0x7f090016
+			public const int action_native_map = 2131296278;
+			
+			// aapt resource value: 0x7f09001b
+			public const int add_geojson_layer = 2131296283;
+			
 			// aapt resource value: 0x7f090006
 			public const int adjust_height = 2131296262;
 			
@@ -305,8 +326,23 @@ namespace AirMapViewQs
 			// aapt resource value: 0x7f09000b
 			public const int auto = 2131296267;
 			
+			// aapt resource value: 0x7f090011
+			public const int btnMapTypeNormal = 2131296273;
+			
+			// aapt resource value: 0x7f090012
+			public const int btnMapTypeSattelite = 2131296274;
+			
+			// aapt resource value: 0x7f090013
+			public const int btnMapTypeTerrain = 2131296275;
+			
 			// aapt resource value: 0x7f09000c
 			public const int dark = 2131296268;
+			
+			// aapt resource value: 0x7f09001f
+			public const int disable_location = 2131296287;
+			
+			// aapt resource value: 0x7f09001e
+			public const int enable_location = 2131296286;
 			
 			// aapt resource value: 0x7f090001
 			public const int hybrid = 2131296257;
@@ -320,11 +356,14 @@ namespace AirMapViewQs
 			// aapt resource value: 0x7f09000d
 			public const int light = 2131296269;
 			
-			// aapt resource value: 0x7f090010
-			public const int map_frame = 2131296272;
+			// aapt resource value: 0x7f090014
+			public const int logs = 2131296276;
 			
-			// aapt resource value: 0x7f09000f
-			public const int map_view = 2131296271;
+			// aapt resource value: 0x7f090015
+			public const int map_frame = 2131296277;
+			
+			// aapt resource value: 0x7f090010
+			public const int map_view = 2131296272;
 			
 			// aapt resource value: 0x7f090002
 			public const int none = 2131296258;
@@ -332,14 +371,23 @@ namespace AirMapViewQs
 			// aapt resource value: 0x7f090003
 			public const int normal = 2131296259;
 			
+			// aapt resource value: 0x7f09001c
+			public const int remove_geojson_layer = 2131296284;
+			
 			// aapt resource value: 0x7f090004
 			public const int satellite = 2131296260;
 			
 			// aapt resource value: 0x7f090009
 			public const int standard = 2131296265;
 			
+			// aapt resource value: 0x7f09001d
+			public const int take_snapshot = 2131296285;
+			
 			// aapt resource value: 0x7f090005
 			public const int terrain = 2131296261;
+			
+			// aapt resource value: 0x7f09000f
+			public const int tv = 2131296271;
 			
 			// aapt resource value: 0x7f09000e
 			public const int webview = 2131296270;
@@ -397,6 +445,22 @@ namespace AirMapViewQs
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0a0000
+			public const int menu_main = 2131361792;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

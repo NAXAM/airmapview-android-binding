@@ -6,8 +6,41 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <com.airbnb.android.airmapview.AirMapView
-    android:id="@+id/map_view"
+  <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="0dp"
+    android:layout_weight="1"
+      >
+    <com.airbnb.android.airmapview.AirMapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <Button
+          android:id="@+id/btnMapTypeNormal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Normal"/>
+      <Button
+          android:id="@+id/btnMapTypeSattelite"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Satellite"/>
+      <Button
+          android:id="@+id/btnMapTypeTerrain"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Terrain"/>
+    </LinearLayout>
+  </FrameLayout>
+
+  <android.support.v7.widget.RecyclerView
+          android:id="@+id/logs"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          app:layoutManager="LinearLayoutManager" />
 </LinearLayout>

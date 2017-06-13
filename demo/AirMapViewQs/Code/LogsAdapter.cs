@@ -51,7 +51,16 @@ namespace AirMapViewQs.Code
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            throw new NotImplementedException();
+            Object log = logs[position];
+            switch (holder.ItemViewType)
+            {
+                case VIEW_TYPE_STRING:
+                    ((StringViewHolder)holder).Bind((string)log);
+                    break;
+                case VIEW_TYPE_BITMAP:
+                    ((BitmapViewHolder)holder).Bind((Bitmap)log);
+                    break;
+            };
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -68,26 +77,26 @@ namespace AirMapViewQs.Code
     public class StringViewHolder : RecyclerView.ViewHolder
     {
 
-        public StringViewHolder(ViewGroup parent) : base(LayoutInflater.From(parent.Context).Inflate(Resource.Layout.list_item_text, parent, false))
+        public StringViewHolder(ViewGroup parent) : base(LayoutInflater.FromContext(parent.Context).Inflate(Resource.Layout.list_item_text, parent, false))
         {
         }
 
         public void Bind(string st)
         {
-            //((TextView)itemView).setText(st);
+            ((TextView)ItemView).Text = st;
         }
     }
 
     public class BitmapViewHolder : RecyclerView.ViewHolder
     {
 
-        public BitmapViewHolder(ViewGroup parent) : base(LayoutInflater.From(parent.Context).Inflate(Resource.Layout.list_item_text, parent, false))
+        public BitmapViewHolder(ViewGroup parent) : base(LayoutInflater.FromContext(parent.Context).Inflate(Resource.Layout.list_item_bitmap, parent, false))
         {
         }
 
         public void Bind(Bitmap bitmap)
         {
-            //((ImageView)itemView).setImageBitmap(bitmap);
+            ((ImageView)ItemView).SetImageBitmap(bitmap);
         }
     }
 }

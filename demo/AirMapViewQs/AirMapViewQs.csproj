@@ -126,14 +126,18 @@
       <Name>AirMapView.Droid</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\menu\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\layout\list_item_bitmap.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\list_item_text.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_location_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
